@@ -1,6 +1,14 @@
-//
-// Created by Illya MALTSEV on 6/9/18.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sha256.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: imaltsev <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/12/19 19:59:22 by imaltsev          #+#    #+#             */
+/*   Updated: 2018/12/19 19:59:23 by imaltsev         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "sha256.h"
 
@@ -11,7 +19,7 @@
 #define T1 (av[4])
 #define T2 (av[5])
 
-static void     calculate()
+void	calculate(void)
 {
 	uint32_t	av[6];
 	int			i;
@@ -42,7 +50,7 @@ void	algorithm(t_string *W, size_t delta)
 	uint32_t h[8];
 
 	prepare_g_W(W);
-	while(delta < W->size / 4)
+	while (delta < W->size / 4)
 	{
 		h[0] = g_A;
 		h[1] = g_B;
@@ -65,13 +73,13 @@ void	algorithm(t_string *W, size_t delta)
 	}
 }
 
-void		sha25_clear_memory(t_string ** W)
+void	sha25_clear_memory(t_string **W)
 {
 	free((*W)->str);
 	free(*W);
 }
 
-uint8_t		*sha256(char *str_input)
+uint8_t	*sha256(char *str_input)
 {
 	t_string	*W;
 	uint8_t		*ret;
