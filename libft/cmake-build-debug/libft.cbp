@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="libft"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="libft">
+				<Option output="/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/libft" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 libft"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="libft/fast">
+				<Option output="/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/libft" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 libft/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/imaltsev/ft_ssl_md5/libft/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/gnlfnc/get_next_line.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/gnlfnc/get_next_line.h">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/gnlfnc/libft.h">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/myfnc/ft_arrnew.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/myfnc/ft_fill_array.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/myfnc/ft_foreach.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/myfnc/ft_gobig.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/myfnc/ft_isstrofdigit.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/myfnc/ft_rot_13.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/myfnc/ft_sqrt.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/myfnc/ft_tenton.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/myfnc/libft.h">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/mylibft.h">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/printffnc/ft_corect.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/printffnc/ft_corect_width_precision.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/printffnc/ft_format_openers.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/printffnc/ft_parsing.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/printffnc/ft_printf.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/printffnc/ft_printf.h">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/printffnc/ft_stdfuncs.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/printffnc/ft_wchar_t_char.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/printffnc/ft_wchar_t_str.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/printffnc/libft.h">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_atoi.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_bzero.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_isalnum.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_isalpha.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_isascii.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_isdigit.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_isprint.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_itoa.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_itoa_base.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_lstadd.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_lstdel.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_lstdelone.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_lstiter.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_lstmap.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_lstnew.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_memalloc.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_memccpy.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_memchr.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_memcmp.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_memcpy.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_memdel.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_memmove.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_memset.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_putchar.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_putchar_fd.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_putendl.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_putendl_fd.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_putnbr.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_putnbr_fd.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_putnstr.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_putstr.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_putstr_fd.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strcat.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strchr.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strclr.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strcmp.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strcpy.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strdel.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strdup.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strequ.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_striter.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_striteri.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strjoin.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strlcat.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strlen.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strmap.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strmapi.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strncat.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strncmp.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strncpy.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strnequ.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strnew.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strnstr.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strrchr.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strsplit.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strstr.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strsub.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_strtrim.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_tolower.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/ft_toupper.c">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/stdlibft/libft.h">
+			<Option target="libft"/>
+		</Unit>
+		<Unit filename="/Users/imaltsev/ft_ssl_md5/libft/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
