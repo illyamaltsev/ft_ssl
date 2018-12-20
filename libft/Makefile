@@ -34,16 +34,19 @@ NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
 
 $(NAME):
-	gcc $(CFLAGS) -c $(OBJC)
-	ar rc $(NAME) $(OBJO)
-	ranlib $(NAME)
+	@gcc $(CFLAGS) -c $(OBJC)
+	@ar rc $(NAME) $(OBJO)
+	@ranlib $(NAME)
+	@echo "\033[0;32mlibft: make: done"
 
 all: $(NAME)
 
 clean:
-	rm -f $(OBJO)
+	@rm -f $(OBJO)
+	@echo "\033[0;31mlibft: clean: done"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "\033[0;31mlibft: fclean: done"
 
 re: fclean all
