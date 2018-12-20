@@ -12,109 +12,129 @@
 
 #include "md5.h"
 
-void	stage_1(t_abcdTX *m, int d)
+void	stage_1(t_md5 *m, int d)
 {
-	m->A = m->B + b_r((m->A + F(m->B, m->C, m->D) + m->X[0 + d] + m->T[1]), 7);
-	m->D = m->A + b_r((m->D + F(m->A, m->B, m->C) + m->X[1 + d] + m->T[2]), 12);
-	m->C = m->D + b_r((m->C + F(m->D, m->A, m->B) + m->X[2 + d] + m->T[3]), 17);
-	m->B = m->C + b_r((m->B + F(m->C, m->D, m->A) + m->X[3 + d] + m->T[4]), 22);
-	m->A = m->B + b_r((m->A + F(m->B, m->C, m->D) + m->X[4 + d] + m->T[5]), 7);
-	m->D = m->A + b_r((m->D + F(m->A, m->B, m->C) + m->X[5 + d] + m->T[6]), 12);
-	m->C = m->D + b_r((m->C + F(m->D, m->A, m->B) + m->X[6 + d] + m->T[7]), 17);
-	m->B = m->C + b_r((m->B + F(m->C, m->D, m->A) + m->X[7 + d] + m->T[8]), 22);
-	m->A = m->B + b_r((m->A + F(m->B, m->C, m->D) + m->X[8 + d] + m->T[9]), 7);
-	m->D = m->A + b_r((m->D + F(m->A, m->B, m->C) + m->X[9 + d] + m->T[10]), 12);
-	m->C = m->D + b_r((m->C + F(m->D, m->A, m->B) + m->X[10 + d] + m->T[11]), 17);
-	m->B = m->C + b_r((m->B + F(m->C, m->D, m->A) + m->X[11 + d] + m->T[12]), 22);
-	m->A = m->B + b_r((m->A + F(m->B, m->C, m->D) + m->X[12 + d] + m->T[13]), 7);
-	m->D = m->A + b_r((m->D + F(m->A, m->B, m->C) + m->X[13 + d] + m->T[14]), 12);
-	m->C = m->D + b_r((m->C + F(m->D, m->A, m->B) + m->X[14 + d] + m->T[15]), 17);
-	m->B = m->C + b_r((m->B + F(m->C, m->D, m->A) + m->X[15 + d] + m->T[16]), 22);
+	uint32_t	*t;
+	uint32_t	*x;
+
+	t = m->t;
+	x = m->x;
+	m->a = m->b + b_r((m->a + f(m->b, m->c, m->d) + x[0 + d] + t[1]), 7);
+	m->d = m->a + b_r((m->d + f(m->a, m->b, m->c) + x[1 + d] + t[2]), 12);
+	m->c = m->d + b_r((m->c + f(m->d, m->a, m->b) + x[2 + d] + t[3]), 17);
+	m->b = m->c + b_r((m->b + f(m->c, m->d, m->a) + x[3 + d] + t[4]), 22);
+	m->a = m->b + b_r((m->a + f(m->b, m->c, m->d) + x[4 + d] + t[5]), 7);
+	m->d = m->a + b_r((m->d + f(m->a, m->b, m->c) + x[5 + d] + t[6]), 12);
+	m->c = m->d + b_r((m->c + f(m->d, m->a, m->b) + x[6 + d] + t[7]), 17);
+	m->b = m->c + b_r((m->b + f(m->c, m->d, m->a) + x[7 + d] + t[8]), 22);
+	m->a = m->b + b_r((m->a + f(m->b, m->c, m->d) + x[8 + d] + t[9]), 7);
+	m->d = m->a + b_r((m->d + f(m->a, m->b, m->c) + x[9 + d] + t[10]), 12);
+	m->c = m->d + b_r((m->c + f(m->d, m->a, m->b) + x[10 + d] + t[11]), 17);
+	m->b = m->c + b_r((m->b + f(m->c, m->d, m->a) + x[11 + d] + t[12]), 22);
+	m->a = m->b + b_r((m->a + f(m->b, m->c, m->d) + x[12 + d] + t[13]), 7);
+	m->d = m->a + b_r((m->d + f(m->a, m->b, m->c) + x[13 + d] + t[14]), 12);
+	m->c = m->d + b_r((m->c + f(m->d, m->a, m->b) + x[14 + d] + t[15]), 17);
+	m->b = m->c + b_r((m->b + f(m->c, m->d, m->a) + x[15 + d] + t[16]), 22);
 }
 
-void	stage_2(t_abcdTX *m, int d)
+void	stage_2(t_md5 *m, int d)
 {
-	m->A = m->B + b_r((m->A + G(m->B, m->C, m->D) + m->X[1 + d] + m->T[17]), 5);
-	m->D = m->A + b_r((m->D + G(m->A, m->B, m->C) + m->X[6 + d] + m->T[18]), 9);
-	m->C = m->D + b_r((m->C + G(m->D, m->A, m->B) + m->X[11 + d] + m->T[19]), 14);
-	m->B = m->C + b_r((m->B + G(m->C, m->D, m->A) + m->X[0 + d] + m->T[20]), 20);
-	m->A = m->B + b_r((m->A + G(m->B, m->C, m->D) + m->X[5 + d] + m->T[21]), 5);
-	m->D = m->A + b_r((m->D + G(m->A, m->B, m->C) + m->X[10 + d] + m->T[22]), 9);
-	m->C = m->D + b_r((m->C + G(m->D, m->A, m->B) + m->X[15 + d] + m->T[23]), 14);
-	m->B = m->C + b_r((m->B + G(m->C, m->D, m->A) + m->X[4 + d] + m->T[24]), 20);
-	m->A = m->B + b_r((m->A + G(m->B, m->C, m->D) + m->X[9 + d] + m->T[25]), 5);
-	m->D = m->A + b_r((m->D + G(m->A, m->B, m->C) + m->X[14 + d] + m->T[26]), 9);
-	m->C = m->D + b_r((m->C + G(m->D, m->A, m->B) + m->X[3 + d] + m->T[27]), 14);
-	m->B = m->C + b_r((m->B + G(m->C, m->D, m->A) + m->X[8 + d] + m->T[28]), 20);
-	m->A = m->B + b_r((m->A + G(m->B, m->C, m->D) + m->X[13 + d] + m->T[29]), 5);
-	m->D = m->A + b_r((m->D + G(m->A, m->B, m->C) + m->X[2 + d] + m->T[30]), 9);
-	m->C = m->D + b_r((m->C + G(m->D, m->A, m->B) + m->X[7 + d] + m->T[31]), 14);
-	m->B = m->C + b_r((m->B + G(m->C, m->D, m->A) + m->X[12 + d] + m->T[32]), 20);
+	uint32_t	*t;
+	uint32_t	*x;
+
+	t = m->t;
+	x = m->x;
+	m->a = m->b + b_r((m->a + g(m->b, m->c, m->d) + x[1 + d] + t[17]), 5);
+	m->d = m->a + b_r((m->d + g(m->a, m->b, m->c) + x[6 + d] + t[18]), 9);
+	m->c = m->d + b_r((m->c + g(m->d, m->a, m->b) + x[11 + d] + t[19]), 14);
+	m->b = m->c + b_r((m->b + g(m->c, m->d, m->a) + x[0 + d] + t[20]), 20);
+	m->a = m->b + b_r((m->a + g(m->b, m->c, m->d) + x[5 + d] + t[21]), 5);
+	m->d = m->a + b_r((m->d + g(m->a, m->b, m->c) + x[10 + d] + t[22]), 9);
+	m->c = m->d + b_r((m->c + g(m->d, m->a, m->b) + x[15 + d] + t[23]), 14);
+	m->b = m->c + b_r((m->b + g(m->c, m->d, m->a) + x[4 + d] + t[24]), 20);
+	m->a = m->b + b_r((m->a + g(m->b, m->c, m->d) + x[9 + d] + t[25]), 5);
+	m->d = m->a + b_r((m->d + g(m->a, m->b, m->c) + x[14 + d] + t[26]), 9);
+	m->c = m->d + b_r((m->c + g(m->d, m->a, m->b) + x[3 + d] + t[27]), 14);
+	m->b = m->c + b_r((m->b + g(m->c, m->d, m->a) + x[8 + d] + t[28]), 20);
+	m->a = m->b + b_r((m->a + g(m->b, m->c, m->d) + x[13 + d] + t[29]), 5);
+	m->d = m->a + b_r((m->d + g(m->a, m->b, m->c) + x[2 + d] + t[30]), 9);
+	m->c = m->d + b_r((m->c + g(m->d, m->a, m->b) + x[7 + d] + t[31]), 14);
+	m->b = m->c + b_r((m->b + g(m->c, m->d, m->a) + x[12 + d] + t[32]), 20);
 }
 
-void	stage_3(t_abcdTX *m, int d)
+void	stage_3(t_md5 *m, int d)
 {
-	m->A = m->B + b_r((m->A + H(m->B, m->C, m->D) + m->X[5 + d] + m->T[33]), 4);
-	m->D = m->A + b_r((m->D + H(m->A, m->B, m->C) + m->X[8 + d] + m->T[34]), 11);
-	m->C = m->D + b_r((m->C + H(m->D, m->A, m->B) + m->X[11 + d] + m->T[35]), 16);
-	m->B = m->C + b_r((m->B + H(m->C, m->D, m->A) + m->X[14 + d] + m->T[36]), 23);
-	m->A = m->B + b_r((m->A + H(m->B, m->C, m->D) + m->X[1 + d] + m->T[37]), 4);
-	m->D = m->A + b_r((m->D + H(m->A, m->B, m->C) + m->X[4 + d] + m->T[38]), 11);
-	m->C = m->D + b_r((m->C + H(m->D, m->A, m->B) + m->X[7 + d] + m->T[39]), 16);
-	m->B = m->C + b_r((m->B + H(m->C, m->D, m->A) + m->X[10 + d] + m->T[40]), 23);
-	m->A = m->B + b_r((m->A + H(m->B, m->C, m->D) + m->X[13 + d] + m->T[41]), 4);
-	m->D = m->A + b_r((m->D + H(m->A, m->B, m->C) + m->X[0 + d] + m->T[42]), 11);
-	m->C = m->D + b_r((m->C + H(m->D, m->A, m->B) + m->X[3 + d] + m->T[43]), 16);
-	m->B = m->C + b_r((m->B + H(m->C, m->D, m->A) + m->X[6 + d] + m->T[44]), 23);
-	m->A = m->B + b_r((m->A + H(m->B, m->C, m->D) + m->X[9 + d] + m->T[45]), 4);
-	m->D = m->A + b_r((m->D + H(m->A, m->B, m->C) + m->X[12 + d] + m->T[46]), 11);
-	m->C = m->D + b_r((m->C + H(m->D, m->A, m->B) + m->X[15 + d] + m->T[47]), 16);
-	m->B = m->C + b_r((m->B + H(m->C, m->D, m->A) + m->X[2 + d] + m->T[48]), 23);
+	uint32_t	*t;
+	uint32_t	*x;
+
+	t = m->t;
+	x = m->x;
+	m->a = m->b + b_r((m->a + h(m->b, m->c, m->d) + x[5 + d] + t[33]), 4);
+	m->d = m->a + b_r((m->d + h(m->a, m->b, m->c) + x[8 + d] + t[34]), 11);
+	m->c = m->d + b_r((m->c + h(m->d, m->a, m->b) + x[11 + d] + t[35]), 16);
+	m->b = m->c + b_r((m->b + h(m->c, m->d, m->a) + x[14 + d] + t[36]), 23);
+	m->a = m->b + b_r((m->a + h(m->b, m->c, m->d) + x[1 + d] + t[37]), 4);
+	m->d = m->a + b_r((m->d + h(m->a, m->b, m->c) + x[4 + d] + t[38]), 11);
+	m->c = m->d + b_r((m->c + h(m->d, m->a, m->b) + x[7 + d] + t[39]), 16);
+	m->b = m->c + b_r((m->b + h(m->c, m->d, m->a) + x[10 + d] + t[40]), 23);
+	m->a = m->b + b_r((m->a + h(m->b, m->c, m->d) + x[13 + d] + t[41]), 4);
+	m->d = m->a + b_r((m->d + h(m->a, m->b, m->c) + x[0 + d] + t[42]), 11);
+	m->c = m->d + b_r((m->c + h(m->d, m->a, m->b) + x[3 + d] + t[43]), 16);
+	m->b = m->c + b_r((m->b + h(m->c, m->d, m->a) + x[6 + d] + t[44]), 23);
+	m->a = m->b + b_r((m->a + h(m->b, m->c, m->d) + x[9 + d] + t[45]), 4);
+	m->d = m->a + b_r((m->d + h(m->a, m->b, m->c) + x[12 + d] + t[46]), 11);
+	m->c = m->d + b_r((m->c + h(m->d, m->a, m->b) + x[15 + d] + t[47]), 16);
+	m->b = m->c + b_r((m->b + h(m->c, m->d, m->a) + x[2 + d] + t[48]), 23);
 }
 
-void	stage_4(t_abcdTX *m, int d)
+void	stage_4(t_md5 *m, int d)
 {
-	m->A = m->B + b_r((m->A + I(m->B, m->C, m->D) + m->X[0 + d] + m->T[49]), 6);
-	m->D = m->A + b_r((m->D + I(m->A, m->B, m->C) + m->X[7 + d] + m->T[50]), 10);
-	m->C = m->D + b_r((m->C + I(m->D, m->A, m->B) + m->X[14 + d] + m->T[51]), 15);
-	m->B = m->C + b_r((m->B + I(m->C, m->D, m->A) + m->X[5 + d] + m->T[52]), 21);
-	m->A = m->B + b_r((m->A + I(m->B, m->C, m->D) + m->X[12 + d] + m->T[53]), 6);
-	m->D = m->A + b_r((m->D + I(m->A, m->B, m->C) + m->X[3 + d] + m->T[54]), 10);
-	m->C = m->D + b_r((m->C + I(m->D, m->A, m->B) + m->X[10 + d] + m->T[55]), 15);
-	m->B = m->C + b_r((m->B + I(m->C, m->D, m->A) + m->X[1 + d] + m->T[56]), 21);
-	m->A = m->B + b_r((m->A + I(m->B, m->C, m->D) + m->X[8 + d] + m->T[57]), 6);
-	m->D = m->A + b_r((m->D + I(m->A, m->B, m->C) + m->X[15 + d] + m->T[58]), 10);
-	m->C = m->D + b_r((m->C + I(m->D, m->A, m->B) + m->X[6 + d] + m->T[59]), 15);
-	m->B = m->C + b_r((m->B + I(m->C, m->D, m->A) + m->X[13 + d] + m->T[60]), 21);
-	m->A = m->B + b_r((m->A + I(m->B, m->C, m->D) + m->X[4 + d] + m->T[61]), 6);
-	m->D = m->A + b_r((m->D + I(m->A, m->B, m->C) + m->X[11 + d] + m->T[62]), 10);
-	m->C = m->D + b_r((m->C + I(m->D, m->A, m->B) + m->X[2 + d] + m->T[63]), 15);
-	m->B = m->C + b_r((m->B + I(m->C, m->D, m->A) + m->X[9 + d] + m->T[64]), 21);
+	uint32_t	*t;
+	uint32_t	*x;
+
+	t = m->t;
+	x = m->x;
+	m->a = m->b + b_r((m->a + i(m->b, m->c, m->d) + x[0 + d] + t[49]), 6);
+	m->d = m->a + b_r((m->d + i(m->a, m->b, m->c) + x[7 + d] + t[50]), 10);
+	m->c = m->d + b_r((m->c + i(m->d, m->a, m->b) + x[14 + d] + t[51]), 15);
+	m->b = m->c + b_r((m->b + i(m->c, m->d, m->a) + x[5 + d] + t[52]), 21);
+	m->a = m->b + b_r((m->a + i(m->b, m->c, m->d) + x[12 + d] + t[53]), 6);
+	m->d = m->a + b_r((m->d + i(m->a, m->b, m->c) + x[3 + d] + t[54]), 10);
+	m->c = m->d + b_r((m->c + i(m->d, m->a, m->b) + x[10 + d] + t[55]), 15);
+	m->b = m->c + b_r((m->b + i(m->c, m->d, m->a) + x[1 + d] + t[56]), 21);
+	m->a = m->b + b_r((m->a + i(m->b, m->c, m->d) + x[8 + d] + t[57]), 6);
+	m->d = m->a + b_r((m->d + i(m->a, m->b, m->c) + x[15 + d] + t[58]), 10);
+	m->c = m->d + b_r((m->c + i(m->d, m->a, m->b) + x[6 + d] + t[59]), 15);
+	m->b = m->c + b_r((m->b + i(m->c, m->d, m->a) + x[13 + d] + t[60]), 21);
+	m->a = m->b + b_r((m->a + i(m->b, m->c, m->d) + x[4 + d] + t[61]), 6);
+	m->d = m->a + b_r((m->d + i(m->a, m->b, m->c) + x[11 + d] + t[62]), 10);
+	m->c = m->d + b_r((m->c + i(m->d, m->a, m->b) + x[2 + d] + t[63]), 15);
+	m->b = m->c + b_r((m->b + i(m->c, m->d, m->a) + x[9 + d] + t[64]), 21);
 }
 
-void	stages(t_abcdTX *m)
+void	stages(t_md5 *m)
 {
-	uint32_t	A;
-	uint32_t	B;
-	uint32_t	C;
-	uint32_t	D;
+	uint32_t	a;
+	uint32_t	b;
+	uint32_t	c;
+	uint32_t	d;
 	size_t		delta;
 
 	delta = 0;
 	while (delta < m->size / 4)
 	{
-		A = m->A;
-		B = m->B;
-		C = m->C;
-		D = m->D;
+		a = m->a;
+		b = m->b;
+		c = m->c;
+		d = m->d;
 		stage_1(m, delta);
 		stage_2(m, delta);
 		stage_3(m, delta);
 		stage_4(m, delta);
-		m->A += A;
-		m->B += B;
-		m->C += C;
-		m->D += D;
+		m->a += a;
+		m->b += b;
+		m->c += c;
+		m->d += d;
 		delta += 16;
 	}
 }

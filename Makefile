@@ -14,17 +14,17 @@ LIBDIR = libft
 all: $(NAME)
 
 $(NAME):
-	make -C $(LIBDIR)
-	gcc $(CFLAGS) $(OBJC) -c $< -I includes
+	make -c $(LIBDIR)
+	gcc $(CFLAGS) $(OBJC) -c $< -i includes
 	gcc $(CFLAGS) $(OBJO) -o $(NAME) $(LIBDIR)/libft.a
 	echo "make : done"
 
 clean:
-	make clean -C $(LIBDIR)
+	make clean -c $(LIBDIR)
 	rm -f $(OBJO)
 
 fclean: clean
-	make fclean -C $(LIBDIR)
+	make fclean -c $(LIBDIR)
 	rm -f $(NAME)
 
 re: fclean all

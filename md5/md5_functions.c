@@ -12,22 +12,22 @@
 
 #include "md5.h"
 
-u_int32_t	F(u_int32_t x, u_int32_t y, u_int32_t z)
+u_int32_t	f(u_int32_t x, u_int32_t y, u_int32_t z)
 {
 	return ((x & y) | (~x & z));
 }
 
-u_int32_t	G(u_int32_t x, u_int32_t y, u_int32_t z)
+u_int32_t	g(u_int32_t x, u_int32_t y, u_int32_t z)
 {
 	return ((x & z) | (~z & y));
 }
 
-u_int32_t	H(u_int32_t x, u_int32_t y, u_int32_t z)
+u_int32_t	h(u_int32_t x, u_int32_t y, u_int32_t z)
 {
 	return (x ^ y ^ z);
 }
 
-u_int32_t	I(u_int32_t x, u_int32_t y, u_int32_t z)
+u_int32_t	i(u_int32_t x, u_int32_t y, u_int32_t z)
 {
 	return (y ^ (~z | x));
 }

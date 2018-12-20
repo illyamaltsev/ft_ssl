@@ -18,26 +18,26 @@
 **	w[i] := w[i-16] + s0 + w[i-7] + s1
 */
 
-void	prepare_g_W(t_string *W)
+void	prepare_g_w(t_string *w)
 {
 	size_t	i;
 	int		s0;
 	int		s1;
 
 	i = 0;
-	ft_bzero(g_W, 64);
-	while (i < W->size / 4)
+	ft_bzero(g_w, 64);
+	while (i < w->size / 4)
 	{
-		g_W[i] = reverse_4_bytes(((uint32_t *)W->str)[i]);
+		g_w[i] = reverse_4_bytes(((uint32_t *)w->str)[i]);
 		i++;
 	}
 	while (i < 64)
 	{
-		s0 = (rotr(g_W[i - 15], 7))
-				^ (rotr(g_W[i - 15], 18)) ^ (g_W[i - 15] >> 3);
-		s1 = (rotr(g_W[i - 2], 17))
-				^ (rotr(g_W[i - 2], 19)) ^ (g_W[i - 2] >> 10);
-		g_W[i] = g_W[i - 16] + s0 + g_W[i - 7] + s1;
+		s0 = (rotr(g_w[i - 15], 7))
+				^ (rotr(g_w[i - 15], 18)) ^ (g_w[i - 15] >> 3);
+		s1 = (rotr(g_w[i - 2], 17))
+				^ (rotr(g_w[i - 2], 19)) ^ (g_w[i - 2] >> 10);
+		g_w[i] = g_w[i - 16] + s0 + g_w[i - 7] + s1;
 		i++;
 	}
 }
