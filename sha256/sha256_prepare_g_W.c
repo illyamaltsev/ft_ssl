@@ -18,19 +18,23 @@
 **	w[i] := w[i-16] + s0 + w[i-7] + s1
 */
 
-void	prepare_g_w(t_string *w)
+char	prepare_g_w(t_string *w)
 {
 	size_t	i;
 	int		s0;
 	int		s1;
 
+	if (w->size == 0)
+		return (0);
 	i = 0;
 	ft_bzero(g_w, 64);
-	while (i < w->size / 4)
+	while (i < 16)
 	{
 		g_w[i] = reverse_4_bytes(((uint32_t *)w->str)[i]);
 		i++;
 	}
+	w->str += 16 * 4;
+	w->size -= 16 * 4;
 	while (i < 64)
 	{
 		s0 = (rotr(g_w[i - 15], 7))
@@ -40,4 +44,5 @@ void	prepare_g_w(t_string *w)
 		g_w[i] = g_w[i - 16] + s0 + g_w[i - 7] + s1;
 		i++;
 	}
+	return (1);
 }

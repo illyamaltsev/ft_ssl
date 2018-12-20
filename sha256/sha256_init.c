@@ -52,6 +52,7 @@ void		init_w(t_string *w, char *str_input)
 	w->str = ft_realloc_free(w->str, w->size + 8);
 	*(uint64_t *)&(w->str[w->size]) = swap_8_bytes((start_size * 8));
 	w->size += 8;
+	w->tofree = w->str;
 }
 
 void		init_sha256(t_string *w, char *str_input)

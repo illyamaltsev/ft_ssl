@@ -30,6 +30,7 @@ u_int32_t		g_k[64];
 typedef	struct	s_string
 {
 	char	*str;
+	char	*tofree;
 	size_t	size;
 }				t_string;
 
@@ -46,7 +47,7 @@ void			init_sha256(t_string *w, char *str_input);
 /*
 **	prepare_g_w.c
 */
-void			prepare_g_w(t_string *w);
+char			prepare_g_w(t_string *w);
 
 /*
 **	tools_sha265.c

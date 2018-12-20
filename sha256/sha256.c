@@ -49,8 +49,7 @@ void	algorithm(t_string *w, size_t delta)
 {
 	uint32_t h[8];
 
-	prepare_g_w(w);
-	while (delta < w->size / 4)
+	while (prepare_g_w(w))
 	{
 		h[0] = g_a;
 		h[1] = g_b;
@@ -73,9 +72,9 @@ void	algorithm(t_string *w, size_t delta)
 	}
 }
 
-void	sha25_clear_memory(t_string **w)
+void	sha256_clear_memory(t_string **w)
 {
-	free((*w)->str);
+	free((*w)->tofree);
 	free(*w);
 }
 
@@ -97,6 +96,6 @@ uint8_t	*sha256(char *str_input)
 	((uint32_t *)ret)[6] = reverse_4_bytes(g_g);
 	((uint32_t *)ret)[7] = reverse_4_bytes(g_h);
 	ret[32] = '\0';
-	sha25_clear_memory(&w);
+	sha256_clear_memory(&w);
 	return (ret);
 }
