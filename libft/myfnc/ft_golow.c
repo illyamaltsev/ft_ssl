@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gobig.c                                         :+:      :+:    :+:   */
+/*   ft_golow.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imaltsev <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/07 15:11:45 by imaltsev          #+#    #+#             */
-/*   Updated: 2018/02/07 15:11:47 by imaltsev         ###   ########.fr       */
+/*   Created: 2019/01/11 13:06:16 by imaltsev          #+#    #+#             */
+/*   Updated: 2019/01/11 13:06:18 by imaltsev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_gobig(char *str)
+char	*ft_golow(char *str)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		str[i] = ft_toupper(str[i]);
+		str[i] = ft_tolower(str[i]);
 		i++;
 	}
 	return (str);

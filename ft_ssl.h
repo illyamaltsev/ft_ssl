@@ -23,6 +23,8 @@ typedef struct	s_flags{
 	char s;
 }				t_flags;
 
+typedef uint8_t *(*t_hash_function)(char *);
+
 /*
 **	print.c
 */
@@ -33,10 +35,15 @@ void			print_hash_from_file(char *command, char *arg, t_flags f);
 /*
 **	error.c
 */
-void			file_error(char *file);
-void			string_error(void);
+void			file_error(char *file, char *command);
+void			string_error(char *command);
 void			flag_error(char f);
 void			comand_error(char *command);
 void			argc_error(void);
+
+/*
+**	tools.c
+*/
+void			ft_print_hash(uint8_t *b, size_t len);
 
 #endif

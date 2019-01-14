@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gobig.c                                         :+:      :+:    :+:   */
+/*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imaltsev <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/07 15:11:45 by imaltsev          #+#    #+#             */
-/*   Updated: 2018/02/07 15:11:47 by imaltsev         ###   ########.fr       */
+/*   Created: 2019/01/11 12:07:36 by imaltsev          #+#    #+#             */
+/*   Updated: 2019/01/11 12:07:37 by imaltsev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_ssl.h"
 
-char	*ft_gobig(char *str)
+void	ft_print_hash(uint8_t *b, size_t len)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
-		str[i] = ft_toupper(str[i]);
-		i++;
-	}
-	return (str);
+	while (i < len)
+		ft_printf("%.2x", b[i++]);
 }

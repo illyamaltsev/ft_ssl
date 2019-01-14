@@ -78,7 +78,7 @@ void	sha256_clear_memory(t_string **w)
 	free(*w);
 }
 
-uint8_t	*sha256(char *str_input)
+uint8_t	*ft_sha256(char *str_input)
 {
 	t_string	*w;
 	uint8_t		*ret;

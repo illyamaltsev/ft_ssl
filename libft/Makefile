@@ -26,7 +26,7 @@ OBJLIBFTC = ft_lstnew.c ft_striter.c ft_strnequ.c ft_atoi.c ft_itoa.c\
 OBJPRINTFC = ft_printf.c ft_stdfuncs.c ft_corect.c ft_wchar_t_char.c ft_wchar_t_str.c\
 			ft_parsing.c ft_format_openers.c ft_corect_width_precision.c
 OBJMYC = ft_fill_array.c ft_rot_13.c ft_sqrt.c ft_arrnew.c ft_tenton.c ft_gobig.c\
-		 	ft_foreach.c ft_isstrofdigit.c ft_realloc_free.c ft_get_all.c
+		 	ft_foreach.c ft_isstrofdigit.c ft_realloc_free.c ft_get_all.c ft_golow.c
 OBJGNLC = get_next_line.c
 OBJC = $(OBJLIBFTC:ft_%.c=stdlibft/ft_%.c) $(OBJPRINTFC:ft_%.c=printffnc/ft_%.c) $(OBJMYC:ft_%.c=myfnc/ft_%.c) $(OBJGNLC:%.c=gnlfnc/%.c)
 OBJO = $(OBJLIBFTC:.c=.o) $(OBJPRINTFC:.c=.o) $(OBJMYC:.c=.o) $(OBJGNLC:.c=.o)

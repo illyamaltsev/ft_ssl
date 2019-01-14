@@ -12,32 +12,21 @@
 
 #include "ft_ssl.h"
 
-void	ft_print_hash(uint8_t *b, size_t len)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < len)
-		ft_printf("%.2x", b[i++]);
-}
-
-void	print_hash(char *command, char *line)
+void	print_hash_function(t_hash_function hf, char *line, size_t len)
 {
 	uint8_t *hash;
 
-	hash = 0;
-	if (!ft_strcmp(command, "md5") || !ft_strcmp(command, "MD5"))
-	{
-		hash = ft_md5(line);
-		ft_print_hash(hash, 16);
-		free(hash);
-	}
+	hash = hf(line);
+	ft_print_hash(hash, len);
+	free(hash);
+}
+
+void	print_tuner(char *command, char *line)
+{
+	if (!ft_strcmp(command, "md5"))
+		print_hash_function(ft_md5, line, 16);
 	else
-	{
-		hash = sha256(line);
-		ft_print_hash(hash, 32);
-		free(hash);
-	}
+		print_hash_function(ft_sha256, line, 32);
 }
 
 void	print_hash_from_stdin(char *command, t_flags f)
@@ -47,7 +36,7 @@ void	print_hash_from_stdin(char *command, t_flags f)
 	ft_get_all(0, &line);
 	if (f.p == 1)
 		ft_printf("%s", line);
-	print_hash(command, line);
+	print_tuner(command, line);
 	ft_printf("\n");
 	free(line);
 }
@@ -55,18 +44,19 @@ void	print_hash_from_stdin(char *command, t_flags f)
 void	print_hash_from_str(char *command, char *arg, t_flags f)
 {
 	if (f.q == 1)
-		print_hash(command, arg);
+		print_tuner(command, arg);
 	else
 	{
 		if (f.r == 1)
 		{
-			print_hash(command, arg);
+			print_tuner(command, arg);
 			ft_printf(" \"%s\"", arg);
 		}
 		else
 		{
 			ft_printf("%s (\"%s\") = ", ft_gobig(command), arg);
-			print_hash(command, arg);
+			ft_golow(command);
+			print_tuner(command, arg);
 		}
 	}
 	ft_printf("\n");
@@ -77,23 +67,23 @@ void	print_hash_from_file(char *command, char *arg, t_flags f)
 	char	*line;
 	int		fd;
 
-	fd = open(arg, O_RDWR);
-	if (fd == -1)
-		file_error(arg);
+	if ((fd = open(arg, O_RDWR)) == -1)
+		file_error(arg, command);
 	else
 	{
 		ft_get_all(fd, &line);
 		if (f.q == 1)
-			print_hash(command, line);
+			print_tuner(command, line);
 		else if (f.r == 1)
 		{
-			print_hash(command, line);
+			print_tuner(command, line);
 			ft_printf(" %s", arg);
 		}
 		else
 		{
 			ft_printf("%s (%s) = ", ft_gobig(command), arg);
-			print_hash(command, line);
+			ft_golow(command);
+			print_tuner(command, line);
 		}
 		ft_printf("\n");
 		free(line);

@@ -35,9 +35,9 @@ typedef	struct	s_string
 }				t_string;
 
 /*
-**	sha256.c
+**	ft_sha256.c
 */
-uint8_t			*sha256(char *str_input);
+uint8_t			*ft_sha256(char *str_input);
 
 /*
 **	init_sha256.c

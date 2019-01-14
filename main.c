@@ -60,7 +60,7 @@ void	program_manager(int ac, char **av)
 		if (i < ac)
 			print_hash_from_str(av[1], av[i++], *f);
 		else
-			string_error();
+			string_error(av[1]);
 	}
 	while (i < ac)
 		print_hash_from_file(av[1], av[i++], *f);

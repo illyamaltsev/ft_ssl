@@ -95,6 +95,7 @@ void				ft_rot_13(char *str);
 char				**ft_arrnew(int i, int j);
 char				*ft_itoa_base(uintmax_t value, int base);
 char				*ft_gobig(char *str);
+char				*ft_golow(char *str);
 int					ft_isstrofdigit(char *str);
 char				*ft_realloc_free(char *str, size_t size);
 void				ft_get_all(int fd, char **line);

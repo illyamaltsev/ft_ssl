@@ -12,15 +12,15 @@
 
 #include "ft_ssl.h"
 
-void	file_error(char *file)
+void	file_error(char *file, char *command)
 {
-	ft_printf("ft_ssl: %s: No such file or directory\n", file);
+	ft_printf("ft_ssl: %s: %s: No such file or directory\n", command, file);
 }
 
-void	string_error(void)
+void	string_error(char *command)
 {
 	ft_printf("ft_ssl: option requires an argument - s\n"
-						"usage: md5 [-pqrs] [command args]\n");
+						"usage: %s [-pqrs] [command args]\n", command);
 }
 
 void	flag_error(char f)

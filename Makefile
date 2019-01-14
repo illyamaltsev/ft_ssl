@@ -1,6 +1,6 @@
 NAME = ft_ssl
 
-OBJSRC = main.c print.c error.c
+OBJSRC = main.c print.c error.c tools.c
 MD5 = md5.c md5_functions.c md5_init.c md5_stages.c md5_tools.c
 SHA256 = sha256.c sha256_init.c sha256_prepare_g_w.c sha256_tools.c
 
