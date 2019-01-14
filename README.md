@@ -17,11 +17,11 @@ The make process will generate a binary called `ft_ssl`.
 
 ### Usage
 After generating a binary, you can run the program with
-`./ft_ssl [command] [command args : -pqrs]`
-`-p`, echo STDIN to STDOUT and append the checksum to STDOUT.
-`-q`, quiet mode.
-`-r`, reverse the format of the output.
-`-s`, print the sum of the given string.
+* `./ft_ssl [command] [command args : -pqrs]`
+* `-p`, echo STDIN to STDOUT and append the checksum to STDOUT.
+* `-q`, quiet mode.
+* `-r`, reverse the format of the output.
+* `-s`, print the sum of the given string.
 
 ### Usage examples
 Encrypting some plaintext/string/file to [md5]:
